@@ -1,54 +1,58 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-  <meta charset='UTF-8' />
-  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-  <meta http-equiv='X-UA-Compatible' content='ie=edge' />
-  <title>Weather Chosen</title>
-  <script src="./src/jquery.js"></script>
-  <link rel='stylesheet' type='text/css' href='./style/reset.css'>
-  <link rel='stylesheet' type='text/css' href='./style/style.css'>
-  <link rel='stylesheet' type='text/css' href='./style/style_responsive.css'>
-  <link rel="stylesheet" type='text/css' href='./assets/font-awesome-4.7.0/css/font-awesome.min.css'>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
-</head>
-<body>
-  <!--
-    HTML NEEDS
-    - input box
-    - submit button
-    - an element with a unique class, id, or data-attribute
-      for each of the weather metrics you want to put on the page.
-   -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather-Dashboard</title>
+    <!--Bootstrap link-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!--My css file-->
+    <link rel="stylesheet" href="css\style.css" />
+    <!--Jquery-->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  </head>
+  <body>
+    <header>Weather Chosen</header>
 
-   <!-- input box -->
-  <nav class= "nav">
-    <input id = 'zip' type="text" placeholder="Please Enter a Zip Code"/>
-    <button id='submit' type='submit' value='Submit'><i class="fa fa-search fa-2x" aria-hidden="true"></i></button>
-  </nav>
-  <div class="wrapper">
-    <article class="imageWrapper">
-      <div class="content" id= 'display'>
-        <div class= "groupInfo">
 
-          <!-- temp, location and description -->
-          <div class= "info infoRight">
-            <div id="location"><p>location</p></div>
-          <div id="temp"><h1>0</h1></div>
-            <div id="desc"><p>description</p></div>
-          </div><!-- end info -->
+    <div class='container'>
+      <div class='row'>
+          <div class='col-sm-4'>
+          <label for='city-search'><h2>Search for a City</h2></label>
+          <div class='input-group mb-3'>
+          <input type='search' class='form-control' placeholder='Search city' id='city-search'>
+          <div class='input-group-append'>
+  
+      <button class='button'id='search-input' type='button/text'>Search</button> </div>  
+          </div>
+          <ul id="list"></ul>
+              
+          <button class='btn-btn-secondary' type='button'>Reset</button>
+          <hr>
+          <div class='search-history'> 
+          </div>
+          </div>
+ 
+            <div class='col-md-8'>  
+            <div class="d-flex flex-column">
+              <div class="p-2" id="current-weather"><h1>Current Conditions</h1></div>
+              <div class="p-2"><h1>5 day forecast</h1></div>
+              <div id="five-day" class="row" ></div>
+      </div>        
+      </div>
+      </div>
 
-          <!-- max and min temp -->
-          <div class= "info infoLeft">
-            <div id="minTemp"><h3>0</h3></div>
-            <p>Min. </br>Temp</p>
-            <div id="maxTemp"><h3>0</h3></div>
-            <p>Max. </br>Temp</p>
-          </div><!-- end info -->
-        </div> <!-- end group info -->
-      </div> <!-- end content  -->
-    </article> <!-- end article -->
-  </div> <!-- end wrapper -->
-  <script src='./src/main.js'></script>
-</body>
+    <!--my JS.file-->
+    <script src="javascript.js"></script>
+  </body>
 </html>
