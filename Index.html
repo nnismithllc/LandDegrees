@@ -10,8 +10,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous"/>
     <!--My css file-->
     <link rel="stylesheet" href="css\style.css" />
     <!--Jquery-->
@@ -29,11 +28,12 @@
       <div class='row'>
           <div class='col-sm-4'>
           <label for='city-search'><h2>Search for a City</h2></label>
+          <p> Enter City Only</p>
           <div class='input-group mb-3'>
           <input type='search' class='form-control' placeholder='Search city' id='city-search'>
           <div class='input-group-append'>
   
-      <button class='button'id='search-input' type='button/text'>Search</button> </div>  
+      <button class='button'id='search-input' type='button/text'>Search</button></div>  
           </div>
           <ul id="list"></ul>
               
@@ -45,8 +45,9 @@
  
             <div class='col-md-8'>  
             <div class="d-flex flex-column">
-              <div class="p-2" id="current-weather"><h1>Current Conditions</h1></div>
-              <div class="p-2"><h1>5 day forecast</h1></div>
+              <div class="p-2 font-face" id="current-weather"><h2>Current Conditions</h2>  
+              <div class="p-2"><h2>5 day forecast</h2></div>
+              <!-- <div id="icon"><img id="wicon" src="" alt="Weather icon"> -->
               <div id="five-day" class="row" ></div>
       </div>        
       </div>
