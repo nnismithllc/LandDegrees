@@ -8,13 +8,6 @@ let uvIndex =
   "https://api.openweathermap.org/data/2.5/uvi?appid={appid}&lat={lat}&lon={lon}"
 let searchedArr = JSON.parse(localStorage.getItem("searchedItems")) || [];
 
-// let iconcode = a.weather[0].icon;
-// let iconurl = "http://openweathermap.org/img/w/" + iconcode + "10d.png";
-// $('#wicon').attr('src', iconurl);
-
-
-
-
 
 //taking in user input, and passing the value into a variable
 $(document).ready(function() {
@@ -55,6 +48,7 @@ function getWeather(cityName) {
     // let weatherIcon = response.weather[0].icon;
     // console.log(weatherIcon)
     // var weatherIconlink = $("<img>")
+
     let weatherIcon = `https://openweathermap.org/img/w/${response.weather[0].icon}.png`
     
     $("#current-weather").append("<div>" + feelslike + "</div>")
@@ -76,9 +70,8 @@ function getWeather(cityName) {
       var results = 0
       previousdate = moment().format("MM/DD/YY")
       for (let index = 0; index < response.list.length; index++) {
-        var currentDate = moment(response.list[index].dt, "X").format(
-          "MM/DD/YY"
-        )
+        var currentDate = moment(response.list[index].dt, "X").format("MM/DD/YY")
+
         var temp = response.list[index].main.temp;
         var humidity = response.list[index].main.humidity;
         var wind = response.list[index].wind.speed;
@@ -94,7 +87,9 @@ function getWeather(cityName) {
           averageTemp = averageTemp + temp
           count++
           previousdate = currentDate
+
         } else {
+
           results = averageTemp / count
           results = Math.floor(results)
           console.log("results:", results)
@@ -118,8 +113,8 @@ function getWeather(cityName) {
           div3.append("wind: " + wind)
           card.append(div3)
 
-          var div4 =  $("<div class= 'card-body'>")
-          div4.append("humidity: " + humidity);
+          var div4 =  $("<div class= 'card-body'>");
+          div4.append("humidity: " + humidity)
           card.append(div4)
 
 
