@@ -57,7 +57,6 @@ function getWeather(cityName) {
     // var weatherIconlink = $("<img>")
     let weatherIcon = `https://openweathermap.org/img/w/${response.weather[0].icon}.png`
     
-    $("#current-weather").append("<p-2>" + feelslike + "<p-2>")
     $("#current-weather").append("<div>" + feelslike + "</div>")
     $("#current-weather").append("<div>" + wind + "</div>")
     $("#current-weather").append("<div>" + humidity + "</div>")
@@ -65,9 +64,6 @@ function getWeather(cityName) {
     
     fiveDay = `http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=${apiKey}`
     
-    
-    // `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`
-
      $.ajax({
       url: fiveDay,
       method: "GET"
@@ -103,10 +99,15 @@ function getWeather(cityName) {
           results = Math.floor(results)
           console.log("results:", results)
           console.log(length)
+
           var card = $("<div class = 'card col-sm-3'>");
+          
+          // var div0 = $("<div class= 'card-header'>")
+          // $("#weatherIcon").attr("src",weatherIcon);
+          // card.append(div0)
 
           var div1 = $("<div class= 'card-header'>");
-          div1.append("Date" + '' + currentDate)
+          div1.append("Date" + '' + currentDate + "src", weatherIcon)
           card.append(div1)
 
           var div2 = $("<div class= 'card-body'>");
@@ -123,8 +124,8 @@ function getWeather(cityName) {
 
 
 
-          $("#five-day").append(card)
 
+          $("#five-day").append(card)
           count = 0
           averageTemp = 0
           previousdate = currentDate

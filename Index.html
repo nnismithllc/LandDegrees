@@ -23,15 +23,13 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   </head>
   <body>
-    <header>
-      <h1> When Degrees</h1>
-    </header>
+    <header>Weather Chosen</header>
+
     <div class="container">
       <div class="row">
-        <div class="col-sm-5">
+        <div class="col-sm-6">
           <label for="city-search"><h2>Search for a City</h2></label>
-        
-          <div class="input-group mb-2">
+          <div class="input-group mb-3">
             <input
               type="search"
               class="form-control"
@@ -39,50 +37,42 @@
               id="city-search"/>
             <div class="input-group-append">
               <button class="button" id="search-input" type="button/text">
-                Press Enter
+                Enter
               </button>
             </div>
           </div>
           <ul id="list"></ul>
-
-          <button class="btn-btn-secondary" type="button">Reset</button>
-          <hr />
           <div class="search-history"></div>
         </div>
-      <div class="row">
-        <div id="five-day" class="row"></div>
-        <div class="p-2">
-        <h2>Current Conditions</h2>
-      </div>
-
-<div class="row">
-        <div class="col-md-12">
-            <div class="p-1" id="current-weather">
+<!-- <div class="row"> -->
+  <div class="container">
+        <div class="row col-sm-4">
+          <!-- <div class="d-flex flex-column"> -->
+            <h2>Current Conditions</h2>
+            <div class="p-2" id="current-weather"></div>
+                      <div id="icon">
+                        <img
+                          id="weatherIcon" src="" alt="Weather Icon"/>
+                      
+            
               <div class="p-3" id="current-city">
                 <div class="p-4" id="current-humidity">
                   <div class="p-5" id="current-weatherIcon">
-                    <div class="p-6"><h2>5 Day Weather Forecast</h2>
-                      <div id="icon">
-                        <img
-                          id="weatherIcon"
-                          src=""
-                          alt="Weather Icon"/>
-                        </div>
-                      
-                    </div>
                   </div>
-                </div>
-
-
-                      </div>
-                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <h2>5 Day Forecast</h2>
+                    <div class="col-lg-10" id="weatherIcon">    
+                    <div id="five-day" class="row">
+                    </div>
+                  </div>
+        
     <!--my JS.file-->
     <script src="javascript.js"></script>
   </body>
