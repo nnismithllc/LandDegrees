@@ -10,49 +10,79 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"/>
+      crossorigin="anonymous"
+    />
     <!--My css file-->
     <link rel="stylesheet" href="css\style.css" />
     <!--Jquery-->
     <script
-    src="https://code.jquery.com/jquery-3.4.1.js"
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   </head>
   <body>
-    <header>Weather Chosen</header>
-
-
-    <div class='container'>
-      <div class='row'>
-          <div class='col-sm-4'>
-          <label for='city-search'><h2>Search for a City</h2></label>
-          <p> Enter City Only</p>
-          <div class='input-group mb-3'>
-          <input type='search' class='form-control' placeholder='Search city' id='city-search'>
-          <div class='input-group-append'>
-  
-      <button class='button'id='search-input' type='button/text'>Search</button></div>  
+    <header>
+      <h1> When Degrees</h1>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-5">
+          <label for="city-search"><h2>Search for a City</h2></label>
+        
+          <div class="input-group mb-2">
+            <input
+              type="search"
+              class="form-control"
+              placeholder="Search Major Cities Only"
+              id="city-search"/>
+            <div class="input-group-append">
+              <button class="button" id="search-input" type="button/text">
+                Press Enter
+              </button>
+            </div>
           </div>
           <ul id="list"></ul>
-              
-          <button class='btn-btn-secondary' type='button'>Reset</button>
-          <hr>
-          <div class='search-history'> 
-          </div>
-          </div>
- 
-            <div class='col-md-8'>  
-            <div class="d-flex flex-column">
-              <div class="p-2 font-face" id="current-weather"><h2>Current Conditions</h2>  
-              <div class="p-2"><h2>5 day forecast</h2></div>
-              <!-- <div id="icon"><img id="wicon" src="" alt="Weather icon"> -->
-              <div id="five-day" class="row" ></div>
-      </div>        
-      </div>
+
+          <button class="btn-btn-secondary" type="button">Reset</button>
+          <hr />
+          <div class="search-history"></div>
+        </div>
+      <div class="row">
+        <div id="five-day" class="row"></div>
+        <div class="p-2">
+        <h2>Current Conditions</h2>
       </div>
 
+<div class="row">
+        <div class="col-md-12">
+            <div class="p-1" id="current-weather">
+              <div class="p-3" id="current-city">
+                <div class="p-4" id="current-humidity">
+                  <div class="p-5" id="current-weatherIcon">
+                    <div class="p-6"><h2>5 Day Weather Forecast</h2>
+                      <div id="icon">
+                        <img
+                          id="weatherIcon"
+                          src=""
+                          alt="Weather Icon"/>
+                        </div>
+                      
+                    </div>
+                  </div>
+                </div>
+
+
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--my JS.file-->
     <script src="javascript.js"></script>
   </body>

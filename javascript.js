@@ -48,19 +48,25 @@ function getWeather(cityName) {
     feelslike = (feelslike - 273.15) * 1.8 + 32
     feelslike = Math.floor(feelslike)
     city = response.name
-    let humity = response.main.humity
+    let humidity = response.main.humidity
+    console.log (humidity)
     let wind = response.wind.speed
     console.log (wind)
     // let weatherIcon = response.weather[0].icon;
     // console.log(weatherIcon)
     // var weatherIconlink = $("<img>")
-    let weatherIcon = `https://openweathermap.org/img/w/+repsonse.weather[0].icon+.png`
+    let weatherIcon = `https://openweathermap.org/img/w/${response.weather[0].icon}.png`
     
+    $("#current-weather").append("<p-2>" + feelslike + "<p-2>")
     $("#current-weather").append("<div>" + feelslike + "</div>")
-    $("#current-weather").append("<div>" + city + "</div>")
     $("#current-weather").append("<div>" + wind + "</div>")
-    fiveDay = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`
+    $("#current-weather").append("<div>" + humidity + "</div>")
+    $("#weatherIcon").attr("src",weatherIcon)
     
+    fiveDay = `http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=${apiKey}`
+    
+    
+    // `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`
 
      $.ajax({
       url: fiveDay,
@@ -77,7 +83,12 @@ function getWeather(cityName) {
         var currentDate = moment(response.list[index].dt, "X").format(
           "MM/DD/YY"
         )
-        var temp = response.list[index].main.temp
+        var temp = response.list[index].main.temp;
+        var humidity = response.list[index].main.humidity;
+        var wind = response.list[index].wind.speed;
+
+
+        console.log(humidity)
         temp = (temp - 273.15) * 1.8 + 32
         temp = Math.floor(temp)
         console.log(currentDate)
@@ -91,19 +102,26 @@ function getWeather(cityName) {
           results = averageTemp / count
           results = Math.floor(results)
           console.log("results:", results)
-          var card = $("<div class = 'card col-sm-3'>")
+          console.log(length)
+          var card = $("<div class = 'card col-sm-3'>");
 
-          var div1 = $("<div class= 'card-header'>")
+          var div1 = $("<div class= 'card-header'>");
           div1.append("Date" + '' + currentDate)
           card.append(div1)
 
-          var div2 = $("<div class= 'card-body'>")
-          div2.append("Average Temperature: " + results)
+          var div2 = $("<div class= 'card-body'>");
+          div2.append("Temperature: " + results)
           card.append(div2)
 
-          var div3 =  $("<div class= 'card-body'>")
-          div3.append("wind: " + results)
+          var div3 =  $("<div class= 'card-body'>");
+          div3.append("wind: " + wind)
           card.append(div3)
+
+          var div4 =  $("<div class= 'card-body'>")
+          div4.append("humidity: " + humidity);
+          card.append(div4)
+
+
 
           $("#five-day").append(card)
 
