@@ -23,49 +23,52 @@
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   </head>
   <body>
-    <div class="bg">
-
-    <p class="py-5 text-center">
     <header>Land Degree </header>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <label for="city-search"><h2>Search for a City</h2></label>
-          <div class="input-group mb-3">
-            <input type="search" class="form-control" placeholder="Search Major Cities Only" id="city-search"/>
-             <div class="input-group-append">
-              <button class="button" id="search-input" type="button/text"> Enter </button> 
-            </div>
+    
+    <div class="bg">
+    <p class="py-5 text-center">
+      <div class="container" id="box">
+        <label for="city-search">
+        <div class="input-group mb-4" id="search-history">
+          <input type="search" class="form-control" placeholder="Search Major Cities Only" id="city-search"/>
+           <div class="input-group-append">
+            <button class="button" id="search-input" type="button/text"> Enter </button></label>
            </div>
-          <ul id="list"></ul> <div class="search-history"></div>
-        </div>
-<!-- <div class="row"> -->
-  <div class="container">
-    <div class="row col-sm-4">
-          <!-- <div class="d-flex flex-column"> -->
+          </div>
+              <select class="custom-select">
+                <ul id="list"><div class="search-history"></ul>
+                <option selected>Search History</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          
+            <div id="icon"><img id="weatherIcon" src="" alt="Weather Icon"/>      
+        <div class="col-sm-6">
         <h2>Current Conditions</h2>
           <div class="p-2" id="current-weather"></div>
-            <div id="icon"><img id="weatherIcon" src="" alt="Weather Icon"/>
               <div class="p-3" id="current-city">
                 <div class="p-4" id="current-humidity">
                   <div class="p-5" id="current-weatherIcon">
-                  </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        
+          
       <div class="bg2">
-
+        <div class="d-flex flex-column">
         <p class="py-5 text-center">
-      <h2>5 Day Forecast</h2>
+                <h2>5 Day Forecast</h2>
             <div id="five-day" class="row">
               <div class="col-md-16" id="weatherIcon"> 
             </div>
             <p class="py-5 text-center"></p>
               </div>
+            </div>
+      </div>
     <!--my JS.file-->
     <script src="javascript.js"></script>
   </body>

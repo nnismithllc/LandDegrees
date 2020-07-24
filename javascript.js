@@ -11,8 +11,8 @@ let searchedArr = JSON.parse(localStorage.getItem("searchedItems")) || [];
 
 //taking in user input, and passing the value into a variable
 $(document).ready(function() {
-  $("searchedItems").on("click", function(event) {
-    var userInput = $("#searchedItems").val()
+  $("#search-input").on("click", function(event) {
+    var userInput = $("#city-search").val()
     console.log(userInput)
     getWeather(userInput)
   
@@ -66,7 +66,7 @@ function getWeather(cityName) {
 
     let weatherIcon = `https://openweathermap.org/img/w/${response.weather[0].icon}.png`
     
-    $("#current-weather").append("<div>" + feelslike + fromCharCode(176) + "F" + "</div>")
+    $("#current-weather").append("<div>" + feelslike + "</div>")
     $("#current-weather").append("<div>" + wind + "</div>")
     $("#current-weather").append("<div>" + humidity + "</div>")
     $("#weatherIcon").attr("src",weatherIcon)
@@ -90,7 +90,7 @@ function getWeather(cityName) {
         var temp = response.list[index].main.temp;
         var humidity = response.list[index].main.humidity;
         var wind = response.list[index].wind.speed;
-        let weatherIcons="<img src= 'http://openweathermap.org/img/w/"+response.list[index].weather[0].icon+".png'>";
+let weatherIcons="<img src= 'http://openweathermap.org/img/w/"+response.list[index].weather[0].icon+".png'>";
 
         console.log(humidity)
         temp = (temp - 273.15) * 1.8 + 32
