@@ -32,8 +32,8 @@
         <div class="input-group mb-4" id="search-history">
           <input type="search" class="form-control" placeholder="Search Major Cities Only" id="city-search"/>
            <div class="input-group-append">
-            <button class="button" id="search-input" type="button/text"> Enter </button></label>
-           </div>
+            <button class="button" onclick="myFunction()" id="search-input" type="button/text"> Enter </button></label>
+      </div>
           </div>
               <select class="custom-select">
                 <ul id="list"><div class="search-history"></ul>
@@ -44,7 +44,7 @@
               </select>
             </div>
       
-            <div class="mx-auto" style="width: 300px;">
+            <div class="mx-auto display" id="display" style="width: 300px; display: none;">
       <div id="icon"><img id="weatherIcon" src="" alt="Weather Icon"/>      
         
         <!-- <div class="col-sm-6"> -->
@@ -59,8 +59,9 @@
             </div>
           </div>
         </div>
-          
+        
       <div class="bg2">
+        <div class="display" id="display" style="width:300px;display: none;">
         <div class="d-flex flex-column" id="weatherIcon">
           <h2>5 Day Forecast</h2>
           <div class="row" id="five-day">

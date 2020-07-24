@@ -21,13 +21,31 @@ $(document).ready(function() {
   
 })
 
+
+function myFunction () {
+
+var show = document.getElementById ("#display");
+if(show.style.display === "none"){
+  show.style.display="visible";
+
+}
+
+}
+
+
+
+
+// $(document).ready(function() {
+//   $("#display").on("click", function(event) {
+//     $("#display").hide();
+//     $("#display").show();
+  
+//   })
+  
+//   })
+
 // function myFunction() {
 
-//   // Set the Value of Each Text Area to Empty String
-//   $(".forms").val("");
-
-//   // For Each Textarea
-//   for(let i = 1; i <= 10; i++){
 
 //   // Set the Local Storage Item to Empty String
 //     localStorage.setItem("item-" + i, "");
