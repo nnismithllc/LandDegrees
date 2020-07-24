@@ -56,17 +56,17 @@ ul {
 #five-day{
 justify-content: center;
 
-  height: 800px;
+  height: 600px;
   width: 1350px;
 }
 
 #icon {
-    justify-content: center;
+    /* justify-content: center; */
     margin-top: 5em;
-    padding-bottom: 20em;
+    padding-bottom:0;
     background-color:white ;
     height: 15em;
-    width: 15em;
+    width: 20em;
     align-items: center;
    
 
