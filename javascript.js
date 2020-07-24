@@ -11,13 +11,28 @@ let searchedArr = JSON.parse(localStorage.getItem("searchedItems")) || [];
 
 //taking in user input, and passing the value into a variable
 $(document).ready(function() {
-  $("#search-input").on("click", function(event) {
-    var userInput = $("#city-search").val()
+  $("searchedItems").on("click", function(event) {
+    var userInput = $("#searchedItems").val()
     console.log(userInput)
     getWeather(userInput)
   
   })
+
+  
 })
+
+// function myFunction() {
+
+//   // Set the Value of Each Text Area to Empty String
+//   $(".forms").val("");
+
+//   // For Each Textarea
+//   for(let i = 1; i <= 10; i++){
+
+//   // Set the Local Storage Item to Empty String
+//     localStorage.setItem("item-" + i, "");
+
+//   }
 
 // userInput is passed into the getWeather function as arguement 'cityName'
 function getWeather(cityName) {
@@ -51,7 +66,7 @@ function getWeather(cityName) {
 
     let weatherIcon = `https://openweathermap.org/img/w/${response.weather[0].icon}.png`
     
-    $("#current-weather").append("<div>" + feelslike + "</div>")
+    $("#current-weather").append("<div>" + feelslike + fromCharCode(176) + "F" + "</div>")
     $("#current-weather").append("<div>" + wind + "</div>")
     $("#current-weather").append("<div>" + humidity + "</div>")
     $("#weatherIcon").attr("src",weatherIcon)
@@ -75,7 +90,7 @@ function getWeather(cityName) {
         var temp = response.list[index].main.temp;
         var humidity = response.list[index].main.humidity;
         var wind = response.list[index].wind.speed;
-
+        let weatherIcons="<img src= 'http://openweathermap.org/img/w/"+response.list[index].weather[0].icon+".png'>";
 
         console.log(humidity)
         temp = (temp - 273.15) * 1.8 + 32
@@ -102,7 +117,7 @@ function getWeather(cityName) {
           // card.append(div0)
 
           var div1 = $("<div class= 'card-header'>");
-          div1.append("Date" + '' + currentDate + "src", weatherIcon)
+          div1.append("Date" + '' + currentDate + weatherIcons)
           card.append(div1)
 
           var div2 = $("<div class= 'card-body'>");
@@ -130,4 +145,4 @@ function getWeather(cityName) {
     })
   })
 }
-
+// }
