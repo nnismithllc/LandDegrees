@@ -17,25 +17,17 @@ $(document).ready(function() {
     getWeather(userInput)
   
   })
+
+  
 })
-// $(document).toggleClass(myFunction);
-// $(document).click(function("search-input") {
-//   $("#search-input").on("click", function(event) {
-//   }
 
+// function myFunction() {
 
-function myFunction() {
-$(document).addclass(input-group-append() {
-  $("display").on("click", function(event) {
-    $("#display").hide();
-    $("#display").show();
-  
-  })
-  
-  })
+//   // Set the Value of Each Text Area to Empty String
+//   $(".forms").val("");
 
-}
-
+//   // For Each Textarea
+//   for(let i = 1; i <= 10; i++){
 
 //   // Set the Local Storage Item to Empty String
 //     localStorage.setItem("item-" + i, "");
@@ -120,7 +112,10 @@ let weatherIcons="<img src= 'http://openweathermap.org/img/w/"+response.list[ind
 
           var card = $("<div class = 'card col-sm-3'>");
           
-      
+          // var div0 = $("<div class= 'card-header'>")
+          // $("#weatherIcon").attr("src",weatherIcon);
+          // card.append(div0)
+
           var div1 = $("<div class= 'card-header'>");
           div1.append("Date" + '' + currentDate + weatherIcons)
           card.append(div1)
@@ -137,6 +132,9 @@ let weatherIcons="<img src= 'http://openweathermap.org/img/w/"+response.list[ind
           div4.append("humidity: " + humidity)
           card.append(div4)
 
+
+
+
           $("#five-day").append(card)
           count = 0
           averageTemp = 0
@@ -147,4 +145,4 @@ let weatherIcons="<img src= 'http://openweathermap.org/img/w/"+response.list[ind
     })
   })
 }
-  
+// }
