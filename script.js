@@ -15,10 +15,11 @@ $(document).ready(function() {
     var userInput = $("#city-search").val()
     console.log(userInput)
     getWeather(userInput)
+    $("#three").removeClass("hide")
+    $("#four").removeClass("hide")
   
   })
 
-  
 })
 
 // function myFunction() {
