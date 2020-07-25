@@ -56,7 +56,7 @@ function getWeather(cityName) {
     let feelslike = response.main.temp
     feelslike = (feelslike - 273.15) * 1.8 + 32
     feelslike = Math.floor(feelslike)
-    city = response.name
+    let city = response.name
     let humidity = response.main.humidity
     console.log (humidity)
     let wind = response.wind.speed
@@ -66,7 +66,7 @@ function getWeather(cityName) {
     // var weatherIconlink = $("<img>")
 
     let weatherIcon = `https://openweathermap.org/img/w/${response.weather[0].icon}.png`
-    
+    $("#current-weather").append("<div>" + city + "</div>") 
     $("#current-weather").append("<div>" + feelslike + "</div>")
     $("#current-weather").append("<div>" + wind + "</div>")
     $("#current-weather").append("<div>" + humidity + "</div>")
@@ -111,7 +111,7 @@ let weatherIcons="<img src= 'http://openweathermap.org/img/w/"+response.list[ind
           console.log("results:", results)
           console.log(length)
 
-          var card = $("<div class = 'card col-sm-3'>");
+          var card = $("<div class = 'card col-md-2'>");
           
           // var div0 = $("<div class= 'card-header'>")
           // $("#weatherIcon").attr("src",weatherIcon);
@@ -122,7 +122,7 @@ let weatherIcons="<img src= 'http://openweathermap.org/img/w/"+response.list[ind
           card.append(div1)
 
           var div2 = $("<div class= 'card-body'>");
-          div2.append("Temperature: " + results)
+          div2.append("Temperature: " + temp)
           card.append(div2)
 
           var div3 =  $("<div class= 'card-body'>");
@@ -132,9 +132,7 @@ let weatherIcons="<img src= 'http://openweathermap.org/img/w/"+response.list[ind
           var div4 =  $("<div class= 'card-body'>");
           div4.append("humidity: " + humidity)
           card.append(div4)
-
-
-
+          
 
           $("#five-day").append(card)
           count = 0

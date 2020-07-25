@@ -44,13 +44,16 @@ background-color: maroon;
 
 
 .card{
+    margin-left: 1em;
     width: 50%;
     height: 50%;
     justify-content: center;
 }
+
 ul {
     list-style-type: none;
   }
+
 .container{
     display: flex;
    justify-content: flex-start;
@@ -62,7 +65,9 @@ ul {
 }
 
 #five-day{
-justify-content: center;
+padding-left: 10%;
+padding-top: 10%;
+  justify-content:left;
 
   height: 600px;
   width: 1350px;
