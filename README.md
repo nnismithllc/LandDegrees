@@ -18,11 +18,14 @@ There are several links to consider when using this file:
 ## Usage 
 
 
-1. On Load Display - https://github.com/nnismithllc/LandDegrees/blob/master/css/images/Capture1Onload.JPG
-2. Enter Data of Major City Only https://github.com/nnismithllc/LandDegrees/blob/master/css/images/Capture2-%20Enter%20City%20and%20Hit%20Enter.JPG
-3. Display Results on Top and Bottom of Page 
+1. On Load Display:
+https://github.com/nnismithllc/LandDegrees/blob/master/css/images/Capture1Onload.JPG
 
+2. Enter Data of Major City Only:
+https://github.com/nnismithllc/LandDegrees/blob/master/css/images/Capture2-%20Enter%20City%20and%20Hit%20Enter.JPG
 
+3. Display Results on Top and Bottom of Page:
+https://github.com/nnismithllc/LandDegrees/blob/master/css/images/Displays%20Current%20Weather%20for%20Today.JPG
 
 
 ##  MIT License
