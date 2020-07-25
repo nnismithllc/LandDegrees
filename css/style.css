@@ -1,3 +1,4 @@
+/* Header Style Sizing and Color */
 header{
     font-size: 300%;
     background-color: gray;
@@ -8,83 +9,83 @@ header{
     padding: 0%;
 }
 
-
+/* Body and HTML Size */
 body, html {
     height: 100%;
 }
-  .bg {
-    /* The image used */
-    background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
-  
-    /* Full height */
-    height: 100%;
-  
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
+
+/* Background Display */
+.bg {
+  /* The Image */
+  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+  height: 100%;
+
+  /* Center and Scale the Image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
 
 }
-
+/* Hidden Display on Load */
 .hide{
-display: none;
+  display: none;
 
 }
 
+/* 2nd Background Color */
 .bg2{
-background-color: maroon;
-
+  background-color: maroon;
 
 }
 
+/* Body Text and Display */
 #box{
-    align-items: center;
+   align-items: center;
+   justify-content: center;
+}
+
+/* Div That 5 Day Data Sit In */
+.card{
+  margin-left: 1em;
+  width: 70%;
+  height: 70%;
   justify-content: center;
 }
 
-
-.card{
-    margin-left: 1em;
-    width: 50%;
-    height: 50%;
-    justify-content: center;
-}
-
+/* List Information */
 ul {
-    list-style-type: none;
+  list-style-type: none;
   }
 
+/* Top Container Layout for Data */
 .container{
-    display: flex;
-   justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 
 }
 
-#results-container{
-    background-color:maroon;
-}
-
+/* 5 Day Results Boxes */
 #five-day{
-padding-left: 10%;
-padding-top: 10%;
+  padding-left: 5%;
+  padding-top: 10%;
   justify-content:left;
-
   height: 600px;
   width: 1350px;
+
 }
 
+/* Icon Display Details */
 #icon {
-    /* justify-content: center; */
-    margin-top: 5em;
-    padding-bottom:0;
-    background-color:white ;
-    height: 15em;
-    width: 20em;
-    align-items: center;
+  margin-top: 5em;
+  padding-bottom:0;
+  background-color:white ;
+  height: 15em;
+  width: 20em;
+  align-items: center;
    
-
 }
+/* Heading Text */
 h2{
-text-align: center;
-color : white;
+  text-align: center;
+  color : white;
 }

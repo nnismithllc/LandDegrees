@@ -1,15 +1,15 @@
-//global variables
+//Global Variables
 let apiKey = "4269100fc528413bd680bdd1eb05bd5d"
 let city = []
 let currentConditions = "https://api.openweathermap.org/data/2.5/weather?appid="
 let fiveDay =
-  "https://api.openweathermap.org/data/2.5/forecast?4269100fc528413bd680bdd1eb05bd5d={cityname}={countrycode}"
+"https://api.openweathermap.org/data/2.5/forecast?4269100fc528413bd680bdd1eb05bd5d={cityname}={countrycode}"
 let uvIndex =
-  "https://api.openweathermap.org/data/2.5/uvi?appid={appid}&lat={lat}&lon={lon}"
+"https://api.openweathermap.org/data/2.5/uvi?appid={appid}&lat={lat}&lon={lon}"
 let searchedArr = JSON.parse(localStorage.getItem("searchedItems")) || [];
 
 
-//taking in user input, and passing the value into a variable
+//Taking in User Input, and Passing the Value into a Variable
 $(document).ready(function() {
   $("#search-input").on("click", function(event) {
     var userInput = $("#city-search").val()
@@ -19,7 +19,6 @@ $(document).ready(function() {
     $("#four").removeClass("hide")
   
   })
-
 })
 
 // function myFunction() {
@@ -35,19 +34,22 @@ $(document).ready(function() {
 
 //   }
 
-// userInput is passed into the getWeather function as arguement 'cityName'
+
+// UserInput is Passed into the getWeather Function as Arguement 'CityName'
 function getWeather(cityName) {
   let apiCall = ""
 
+// Enter apiCall
   if (cityName !== "") {
     apiCall = currentConditions + apiKey + "&q=" + cityName
-    //return apiCall;
+//return apiCall;
+
   } else {
     apiCall = currentConditions + apiKey + "&q=" + city
-    //return apiCall;
+//return Second apiCall;
   }
  
-
+// Retrieve Data from OpenWeather Site and Filters a Loop for Responses
   $.ajax({
     url: apiCall,
     method: "GET"
@@ -61,10 +63,8 @@ function getWeather(cityName) {
     console.log (humidity)
     let wind = response.wind.speed
     console.log (wind)
-    // let weatherIcon = response.weather[0].icon;
-    // console.log(weatherIcon)
-    // var weatherIconlink = $("<img>")
-
+   
+// Gets Results and Appends It to Page
     let weatherIcon = `https://openweathermap.org/img/w/${response.weather[0].icon}.png`
     $("#current-weather").append("<div>" + city + "</div>") 
     $("#current-weather").append("<div>" + feelslike + "</div>")
@@ -72,8 +72,8 @@ function getWeather(cityName) {
     $("#current-weather").append("<div>" + humidity + "</div>")
     $("#weatherIcon").attr("src",weatherIcon)
     
+// Retrieve Data from OpenWeather Site and Filters a Loop for 5 Day Information
     fiveDay = `http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=${apiKey}`
-    
      $.ajax({
       url: fiveDay,
       method: "GET"
@@ -91,6 +91,7 @@ function getWeather(cityName) {
         var temp = response.list[index].main.temp;
         var humidity = response.list[index].main.humidity;
         var wind = response.list[index].wind.speed;
+
 let weatherIcons="<img src= 'http://openweathermap.org/img/w/"+response.list[index].weather[0].icon+".png'>";
 
         console.log(humidity)
@@ -105,43 +106,39 @@ let weatherIcons="<img src= 'http://openweathermap.org/img/w/"+response.list[ind
           previousdate = currentDate
 
         } else {
+ // Retrieving Data from Apicall and Producing Information Results
+        results = averageTemp / count
+        results = Math.floor(results)
+        console.log("results:", results)
+        console.log(length)
 
-          results = averageTemp / count
-          results = Math.floor(results)
-          console.log("results:", results)
-          console.log(length)
+// Append Data to the Divs on HTML
+        var card = $("<div class = 'card col-sm-2'>");
+      
+        var div1 = $("<div class= 'card-header'>");
+        div1.append("Date" + '' + currentDate + weatherIcons)
+        card.append(div1)
 
-          var card = $("<div class = 'card col-md-2'>");
-          
-          // var div0 = $("<div class= 'card-header'>")
-          // $("#weatherIcon").attr("src",weatherIcon);
-          // card.append(div0)
+        var div2 = $("<div class= 'card-body'>");
+        div2.append("Temperature: " + temp)
+        card.append(div2)
 
-          var div1 = $("<div class= 'card-header'>");
-          div1.append("Date" + '' + currentDate + weatherIcons)
-          card.append(div1)
+        var div3 =  $("<div class= 'card-body'>");
+        div3.append("wind: " + wind)
+        card.append(div3)
 
-          var div2 = $("<div class= 'card-body'>");
-          div2.append("Temperature: " + temp)
-          card.append(div2)
+        var div4 =  $("<div class= 'card-body'>");
+        div4.append("humidity: " + humidity)
+        card.append(div4)
 
-          var div3 =  $("<div class= 'card-body'>");
-          div3.append("wind: " + wind)
-          card.append(div3)
-
-          var div4 =  $("<div class= 'card-body'>");
-          div4.append("humidity: " + humidity)
-          card.append(div4)
-          
-
-          $("#five-day").append(card)
-          count = 0
-          averageTemp = 0
-          previousdate = currentDate
+// Grabs 5 Day Data and Append to Page
+        $("#five-day").append(card)
+        count = 0
+        averageTemp = 0
+        previousdate = currentDate
          
         }
       }
     })
   })
 }
-// }

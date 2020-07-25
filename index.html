@@ -1,74 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Head Information -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather-Dashboard</title>
-    <!--Bootstrap link-->
+<!--Bootstrap Link-->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <!--My css file-->
-    <link rel="stylesheet" href="css\style.css" />
-    <!--Jquery-->
+      crossorigin="anonymous"/>
+
+<!--My CSS File-->
+   <link rel="stylesheet" href="css\style.css"/>
+    
+<!--JQuery Link-->
     <script
-      src="https://code.jquery.com/jquery-3.4.1.js"
-      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-      crossorigin="anonymous"
-    ></script>
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous" ></script>
     <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
   </head>
+ 
+<!-- Body and Header Details -->
   <body>
-    <header>Land Degrees </header>
-    
-    <div class="bg">
-    <p class="py-5 text-center">
-      <div class="container" id="box">
-        <label for="city-search">
-        <div class="input-group mb-4" id="search-history">
-          <input type="search" class="form-control" placeholder="Search Major Cities Only" id="city-search"/>
-           <div class="input-group-append">
-            <button class="button" id="search-input" type="button/text"> Enter </button></label>
-           </div>
-          </div>
-              <select class="custom-select">
-                <ul id="list"><div class="search-history"></ul>
-                <option selected>Search History</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
-              </select>
-            </div>
-      
-
-    
-      <div class="mx-auto hide" id= "three" style="width: 300px;">
-        <div class="p-1" id="city-name">
-        <div id="icon">
-          <img id="weatherIcon" src="" alt="Weather Icon"/>
-             
-
-<h2>Current Conditions</h2>
-
-<div class="p-2" id="current-weather"></div>
+  <header>Land Degrees</header>
+  
+<!-- First Background Div Details -->
+  <div class="bg">
+  <p class="py-5 text-center">
+  <div class="container" id="box">
+  <label for="city-search">
+  <div class="input-group mb-4" id="search-history">
+  <input type="search" class="form-control" placeholder="Search Major Cities Only" id="city-search"/>
+  <div class="input-group-append">
+  <button class="button" id="search-input" type="button/text"> Enter </button></label>
   </div>
-</div>
-</div>
-
-
-      <div class="bg2 hide" id="four">
-        <div class="d-flex flex-column" id="weatherIcon">
-          <h2>5 Day Forecast</h2>
-          <div class="row" id="five-day">
-            </div>
-              </div>
-            </div>
+  </div>
+  
+<!-- Search Drop-down Link  -->
+  <select class="custom-select">
+  <ul id="list"><div class="search-history"></ul>
+  <option selected>Search History</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+  </select>
+  </div>
       
-    <!--my JS.file-->
-    <script src="script.js"></script>
-  </body>
+<!-- Box with Current Weather Display Auto Hide -->
+  <div class="mx-auto hide" id= "three" style="width: 300px;">
+  <div class="p-1" id="city-name">
+  <div id="icon">
+  <img id="weatherIcon" src="" alt="Weather Icon"/>
+<!-- Header for Box Display -->
+  <h2>Current Conditions</h2>
+  <div class="p-2" id="current-weather"></div>
+  </div>
+  </div>
+  </div>
+
+<!-- 2nd Background Div Display Auto Hide -->
+  <div class="bg2 hide" id="four">
+  <div class="d-flex flex-column" id="weatherIcon">
+  <h2>5 Day Forecast</h2>
+  <div class="row" id="five-day">
+  </div>
+  </div>
+  </div>
+
+<!--my Javascript File-->
+<script src="script.js"></script>
+</body>
 </html>
