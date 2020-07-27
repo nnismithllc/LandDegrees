@@ -73,7 +73,7 @@ function getWeather(cityName) {
     $("#weatherIcon").attr("src",weatherIcon)
     
 // Retrieve Data from OpenWeather Site and Filters a Loop for 5 Day Information
-    fiveDay = `http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=${apiKey}`
+    fiveDay = `https://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=${apiKey}`
      $.ajax({
       url: fiveDay,
       method: "GET"
@@ -92,7 +92,7 @@ function getWeather(cityName) {
         var humidity = response.list[index].main.humidity;
         var wind = response.list[index].wind.speed;
 
-let weatherIcons="<img src= 'http://openweathermap.org/img/w/"+response.list[index].weather[0].icon+".png'>";
+let weatherIcons="<img src= 'https://openweathermap.org/img/w/"+response.list[index].weather[0].icon+".png'>";
 
         console.log(humidity)
         temp = (temp - 273.15) * 1.8 + 32
