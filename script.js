@@ -17,6 +17,7 @@ $(document).ready(function() {
     getWeather(userInput)
     $("#three").removeClass("hide")
     $("#four").removeClass("hide")
+    $("#four").removeClass("five-day")
   
   })
 })
