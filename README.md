@@ -26,6 +26,7 @@ There are several links to consider when using this file:
 
 3. Display Results on Top and Bottom of Page:
 ![image](https://user-images.githubusercontent.com/65423204/105001301-8f420a80-59fd-11eb-8d28-2faace3f204b.png)
+![image](https://user-images.githubusercontent.com/65423204/105001530-e8aa3980-59fd-11eb-91dc-7a1d2ed336cd.png)
 
 
 ##  MIT License
