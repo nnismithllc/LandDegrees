@@ -19,13 +19,13 @@ There are several links to consider when using this file:
 
 
 1. On Load Display:
-https://github.com/nnismithllc/LandDegrees/blob/master/css/images/Capture1Onload.JPG
+![image](https://user-images.githubusercontent.com/65423204/105001051-2bb7dd00-59fd-11eb-8557-4c15110a78cb.png)
 
 2. Enter Data of Major City Only:
-https://github.com/nnismithllc/LandDegrees/blob/master/css/images/Capture2-%20Enter%20City%20and%20Hit%20Enter.JPG
+![image](https://user-images.githubusercontent.com/65423204/105001197-6457b680-59fd-11eb-93b5-206f1dbcc6ee.png)
 
 3. Display Results on Top and Bottom of Page:
-https://github.com/nnismithllc/LandDegrees/blob/master/css/images/Displays%20Current%20Weather%20for%20Today.JPG
+![image](https://user-images.githubusercontent.com/65423204/105001301-8f420a80-59fd-11eb-8d28-2faace3f204b.png)
 
 
 ##  MIT License
